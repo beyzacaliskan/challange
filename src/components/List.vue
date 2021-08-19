@@ -29,6 +29,7 @@
     <ListItem v-for="(link, key) in sort(visiblePages)" :key="key" :link="link" @popup="popupState"/>
 
     <v-pagination
+      v-if="links.length > 0"
       v-model="page"
       :length="Math.ceil(links.length/perPage)"
       color="success"
